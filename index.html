@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #78b3f1;
+
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+        .login-container h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .login-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="text" id="name" placeholder="Enter your name to proceed">
+        
+        <button onclick="proceed()">Proceed</button>
+    </div>
+
+    <script>
+        function proceed() {
+            const name = document.getElementById("name").value;
+            if (name) {
+                alert(`Welcome, ${name}!`);
+                window.location.href = 'home.html';
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+    </script>
+</body>
+</html>
